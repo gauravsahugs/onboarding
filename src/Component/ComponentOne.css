@@ -1,0 +1,56 @@
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-subheading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-subheading > h3 {
+    color: gray;
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.inputnamefield > label {
+    color: rgb(52, 50, 50);
+    padding: 5px 0px;
+    font-family: sans-serif;
+}
+.inputnamefield > input {
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.inputnamefield{
+    display:flex;
+    flex-direction: column;
+    width: 150%;
+    padding: 10px;
+}
+.container3 > button {
+    margin: 15px;
+    padding: 15px;
+    width: 150%;
+    border: none;
+    color: white;
+background-color: #8258E9;
+border-radius: 2px;
+cursor: pointer;
+}
+
+
+.errormsg{
+    font-size: small;
+    color: red;
+}

@@ -1,0 +1,51 @@
+.container1{
+    display: flex;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+.container2 > h3 {
+    color: gray;
+}
+
+.boxcontainer{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    font-family: serif;
+}
+
+.container4{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: rgba(0,0,0,0.25);
+    margin: 2px;
+    padding:10px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 0.25rem;
+
+}
+.selected{
+    border-color: #8258E9; 
+    background-color: #8258E9; 
+    color: aliceblue;
+}
+
+
+.btn {
+    margin: 15px;
+    padding: 15px;
+    width: 30%;
+    border: none;
+    color: white;
+background-color: #8258E9;
+border-radius: 2px;
+cursor: pointer;
+}

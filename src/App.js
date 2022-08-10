@@ -1,23 +1,114 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import ComponentFour from "./Component/ComponentFour";
+import ComponentOne from "./Component/ComponentOne";
+import ComponentThree from "./Component/ComponentThree";
+import ComponentTwo from "./Component/ComponentTwo";
+import logo from "./Component/logo.PNG";
 
 function App() {
+  const candidateData = {
+    fullName: "",
+    displayName: "",
+    workSpaceName: "",
+    workSpaceUrl: "",
+    page: 1,
+    fullNameError: "",
+    displayNameError: "",
+    workSpaceNameError: "",
+    workSpaceUrlError: "",
+    workSpaceSetup: 0,
+  };
+
+  const [candidateDetails, setCandidateDetails] = useState(candidateData);
+  console.log(candidateDetails);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app">
+      <div className="heading">
+        <img className="logo" src={logo} alt="Eden Logo" />
+        <h1> Eden</h1>
+      </div>
+      <div className="container-progressbar">
+        <div
+          className={
+            1 <= candidateDetails.page
+              ? "progressbar progressbar-selected"
+              : "progressbar"
+          }
         >
-          Learn React
-        </a>
-      </header>
+          1
+        </div>
+        <div
+          className={
+            2 <= candidateDetails.page
+              ? "progressbar-connector progressbar-selected"
+              : "progressbar-connector"
+          }
+        ></div>
+        <div
+          className={
+            2 <= candidateDetails.page
+              ? "progressbar progressbar-selected"
+              : "progressbar"
+          }
+        >
+          <span>2</span>
+        </div>
+        <div
+          className={
+            3 <= candidateDetails.page
+              ? "progressbar-connector progressbar-selected"
+              : "progressbar-connector"
+          }
+        ></div>
+        <div
+          className={
+            3 <= candidateDetails.page
+              ? "progressbar progressbar-selected"
+              : "progressbar"
+          }
+        >
+          3
+        </div>
+        <div
+          className={
+            4 <= candidateDetails.page
+              ? "progressbar-connector progressbar-selected"
+              : "progressbar-connector"
+          }
+        ></div>
+        <div
+          className={
+            4 <= candidateDetails.page
+              ? "progressbar progressbar-selected"
+              : "progressbar"
+          }
+        >
+          4
+        </div>
+      </div>
+
+      {candidateDetails.page === 1 && (
+        <ComponentOne
+          candidateDetails={candidateDetails}
+          setCandidateDetails={setCandidateDetails}
+        />
+      )}
+      {candidateDetails.page === 2 && (
+        <ComponentTwo
+          candidateDetails={candidateDetails}
+          setCandidateDetails={setCandidateDetails}
+        />
+      )}
+      {candidateDetails.page === 3 && (
+        <ComponentThree
+          candidateDetails={candidateDetails}
+          setCandidateDetails={setCandidateDetails}
+        />
+      )}
+      {candidateDetails.page === 4 && (
+        <ComponentFour candidateDetails={candidateDetails} />
+      )}
     </div>
   );
 }
