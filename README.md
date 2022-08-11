@@ -1,4 +1,4 @@
-One can visit this link to see the deploy view of this projec.
+You can visit this link to see the deploy view of this project.
 https://cutshortonboarding.herokuapp.com/
 
 
