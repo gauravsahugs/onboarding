@@ -26,7 +26,7 @@ function App() {
     <div className="app">
       <div className="heading">
         <img className="logo" src={logo} alt="Eden Logo" />
-        <h1> Eden</h1>
+        <h1>Onboarding Eagle</h1>
       </div>
       <div className="container-progressbar">
         <div
